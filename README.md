@@ -1,1 +1,2 @@
-Watchcharm Це результат роботи проєктної групи 19 на першому командному проєкті
+GoIT-JS-HW-09
+Nineth homework of JavaScript
