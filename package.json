@@ -1,11 +1,11 @@
 {
-  "name": "PrGr19-FirstTeamProject",
+  "name": "GoIT-JS-HW-09",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/PrGr19-FirstTeamProject/",
+    "build": "vite build --base=/GoIT-JS-HW-09/",
     "preview": "vite preview"
   },
   "devDependencies": {
