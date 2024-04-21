@@ -1,2 +1,1 @@
-GoIT-JS-HW-09
-Nineth homework of JavaScript
+GoIT-JS-HW-09 Ninth homework of JavaScript
