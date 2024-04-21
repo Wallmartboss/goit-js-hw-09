@@ -72,11 +72,23 @@ const createElGallery = image => {
         <a class="gallery-link" href="${image.original}">
         <img class="gallery-image"
          src="${image.preview}"
-          data-source="${image.original}"
-          alt="${image.description}"
+         alt="${image.description}"
         />
         </a>
         </li>`;
 };
 const createGallery = images.map(image => createElGallery(image)).join('');
 gallery.innerHTML = createGallery;
+
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
+
+let lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
+});
+
+// lightbox.options('show.simplelightbox', function () {
+//   captionsData: 'alt';
+//   captionDelay: 250;
+// });
