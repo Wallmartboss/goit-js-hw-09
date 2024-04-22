@@ -25,7 +25,13 @@ form.addEventListener('input', () => {
 
 form.addEventListener('submit', event => {
   event.preventDefault();
-  console.log(JSON.parse(localStorage.getItem(localStorageKey)));
-  localStorage.removeItem(localStorageKey);
-  form.reset();
+  const filledData = JSON.parse(localStorage.getItem(localStorageKey));
+  if (filledData.email !== '' && filledData.message !== '') {
+    console.log(JSON.parse(localStorage.getItem(localStorageKey)));
+    localStorage.removeItem(localStorageKey);
+    form.reset();
+    alert(`Thanks for your feedback`);
+  } else {
+    alert(`Please fill all form's fields`);
+  }
 });
