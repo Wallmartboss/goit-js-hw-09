@@ -4,6 +4,7 @@ const textarea = document.querySelector("textarea[name='message']");
 
 const localStorageKey = 'feedback-form-state';
 let userData;
+// const fillForm = () => {
 try {
   const filledData = JSON.parse(localStorage.getItem(localStorageKey));
   if (filledData !== null) {
@@ -26,12 +27,17 @@ form.addEventListener('input', () => {
 form.addEventListener('submit', event => {
   event.preventDefault();
   const filledData = JSON.parse(localStorage.getItem(localStorageKey));
-  if (filledData.email !== '' && filledData.message !== '') {
-    console.log(JSON.parse(localStorage.getItem(localStorageKey)));
-    localStorage.removeItem(localStorageKey);
-    form.reset();
-    alert(`Thanks for your feedback`);
+  if (filledData == null) {
+    alert(`Please begin filling form's fields`);
+    return;
   } else {
-    alert(`Please fill all form's fields`);
+    if (filledData.email !== '' && filledData.message !== '') {
+      console.log(JSON.parse(localStorage.getItem(localStorageKey)));
+      localStorage.removeItem(localStorageKey);
+      form.reset();
+      alert(`Thanks for your feedback`);
+    } else {
+      alert(`Please fill all form's fields`);
+    }
   }
 });
